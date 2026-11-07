@@ -1,0 +1,47 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mnr.greencampus"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+11-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:2:5-76
+11-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:2:22-74
+12
+13    <application
+13-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:3:5-17:19
+14        android:allowBackup="true"
+14-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:6:9-35
+15        android:extractNativeLibs="false"
+16        android:label="Green Campus Tracker"
+16-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:5:9-45
+17        android:supportsRtl="true"
+17-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:7:9-35
+18        android:theme="@style/AppTheme" >
+18-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:4:9-40
+19        <activity
+19-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:8:9-16:20
+20            android:name="com.mnr.greencampus.MainActivity"
+20-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:9:13-41
+21            android:exported="true"
+21-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:10:13-36
+22            android:windowSoftInputMode="adjustResize" >
+22-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:11:13-55
+23            <intent-filter>
+23-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:12:13-15:29
+24                <action android:name="android.intent.action.MAIN" />
+24-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:13:17-68
+24-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:13:25-66
+25
+26                <category android:name="android.intent.category.LAUNCHER" />
+26-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:14:17-76
+26-->C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\AndroidManifest.xml:14:27-74
+27            </intent-filter>
+28        </activity>
+29    </application>
+30
+31</manifest>

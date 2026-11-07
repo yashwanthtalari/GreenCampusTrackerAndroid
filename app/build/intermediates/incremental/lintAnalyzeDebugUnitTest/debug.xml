@@ -1,0 +1,27 @@
+<variant
+    name="debug"
+    package="com.mnr.greencampus"
+    minSdkVersion="23"
+    targetSdkVersion="35"
+    debuggable="true"
+    mergedManifest="build\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml"
+    partialResultsDir="build\intermediates\unit_test_lint_partial_results\debug\lintAnalyzeDebugUnitTest\out"
+    desugaredMethodsFiles="C:\Users\Yashwanth Talari\.gradle\caches\8.11.1\transforms\6fdc5f4299c5b112f1833e7df2ae9b95\transformed\desugar_jdk_libs_configuration-2.1.3-desugar-lint.txt;C:\Users\Yashwanth Talari\.gradle\caches\8.11.1\transforms\88c4b6ea4eb6bdf0538cc5c0b40d8cea\transformed\D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      coreLibraryDesugaring="true"
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+  </sourceProviders>
+  <testSourceProviders>
+    <sourceProvider
+        manifests="src\test\AndroidManifest.xml"
+        javaDirectories="src\test\java;src\testDebug\java;src\test\kotlin;src\testDebug\kotlin"
+        assetsDirectories="src\test\assets;src\testDebug\assets"
+        unitTest="true"/>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      type="UNIT_TEST">
+  </artifact>
+</variant>

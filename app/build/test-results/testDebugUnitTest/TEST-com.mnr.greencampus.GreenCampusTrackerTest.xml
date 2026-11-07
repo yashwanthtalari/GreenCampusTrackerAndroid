@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mnr.greencampus.GreenCampusTrackerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-06T14:51:57" hostname="YASH-LOQ" time="0.015">
+  <properties/>
+  <testcase name="testT5_AssignVolunteer" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.004"/>
+  <testcase name="testT2_SaplingIdValidation" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.004"/>
+  <testcase name="testT7_UpdateDeadSaplingThrowsException" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.0"/>
+  <testcase name="testT6_AddGrowthRecord" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.0"/>
+  <testcase name="testT8_SurvivalReportCalculation" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.0"/>
+  <testcase name="testT3_InvalidWateringInterval" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.0"/>
+  <testcase name="testT1_RegisterValidSapling" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.001"/>
+  <testcase name="testT9_DateCalculations" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.004"/>
+  <testcase name="testT10_WateringScheduleDue" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.0"/>
+  <testcase name="testT4_SaplingDetails" classname="com.mnr.greencampus.GreenCampusTrackerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

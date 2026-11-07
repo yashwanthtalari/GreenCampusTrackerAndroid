@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Green Campus</string>
+    <string name="app_subtitle">Tree Plantation &amp; Survival Tracker</string>
+    
+    <!-- Navigation Tabs -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_saplings">Saplings</string>
+    <string name="nav_volunteers">Caretakers</string>
+    <string name="nav_reports">Analytics</string>
+
+    <!-- Quick Actions -->
+    <string name="action_register_sapling">Add Sapling</string>
+    <string name="action_register_volunteer">Add Caretaker</string>
+    <string name="action_record_watering">Record Watering</string>
+    <string name="action_log_growth">Log Growth</string>
+    <string name="action_load_demo">Load Demo Data</string>
+    <string name="action_clear_data">Reset Database</string>
+
+    <!-- Filter Labels -->
+    <string name="filter_all">All</string>
+    <string name="filter_due">Watering Due</string>
+    <string name="filter_healthy">Healthy</string>
+    <string name="filter_needs_care">Needs Care</string>
+    <string name="filter_dead">Dead</string>
+</resources>
+

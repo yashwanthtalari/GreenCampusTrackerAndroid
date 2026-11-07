@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Greens -->
+    <color name="primary">#1B5E20</color>
+    <color name="primary_dark">#0D3B13</color>
+    <color name="primary_light">#4C8C4A</color>
+    <color name="secondary">#00796B</color>
+    <color name="secondary_light">#E0F2F1</color>
+    
+    <!-- Backgrounds -->
+    <color name="background">#F4F8F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#EBF3EC</color>
+    <color name="divider">#E0E7E2</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#1C2A20</color>
+    <color name="text_secondary">#4E6152</color>
+    <color name="text_muted">#7F9483</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Status Badges -->
+    <color name="status_healthy">#2E7D32</color>
+    <color name="status_healthy_bg">#E8F5E9</color>
+    <color name="status_needs_care">#EF6C00</color>
+    <color name="status_needs_care_bg">#FFF3E0</color>
+    <color name="status_dead">#C62828</color>
+    <color name="status_dead_bg">#FFEBEE</color>
+
+    <!-- Watering Badges -->
+    <color name="water_due_urgent">#D32F2F</color>
+    <color name="water_due_urgent_bg">#FFEBEE</color>
+    <color name="water_due_today">#E65100</color>
+    <color name="water_due_today_bg">#FFF3E0</color>
+    <color name="water_ok">#00796B</color>
+    <color name="water_ok_bg">#E0F2F1</color>
+</resources>
+

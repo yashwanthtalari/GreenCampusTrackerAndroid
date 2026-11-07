@@ -1,0 +1,7 @@
+com.mnr.greencampus.app-pngs-0 C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build\generated\res\pngs\debug
+com.mnr.greencampus.app-resValues-1 C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build\generated\res\resValues\debug
+com.mnr.greencampus.app-packageDebugResources-2 C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.mnr.greencampus.app-packageDebugResources-3 C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.mnr.greencampus.app-debug-4 C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.mnr.greencampus.app-debug-5 C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\debug\res
+com.mnr.greencampus.app-main-6 C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res

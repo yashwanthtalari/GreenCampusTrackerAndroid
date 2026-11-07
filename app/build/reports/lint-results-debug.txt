@@ -1,0 +1,831 @@
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:276: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        textHeight.setText(String.format("Height: %.1f cm", s.getCurrentHeight()));
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:557: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            sub.setText(String.format("Planted: %d  •  Surviving: %d  •  Dead: %d",
+                        ^
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:804: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        textWatering.setText(String.format("💧 Watering: Every %d days • Next: %s",
+                             ^
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:806: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        textHeight.setText(String.format("📏 Current Height: %.1f cm", fresh.getCurrentHeight()));
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:836: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+                line1.setText(String.format("%s  •  %.1f cm  •  %s",
+                              ^
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:69: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        holder.textHeight.setText(String.format("Height: %.1f cm • Planted: %s", s.getCurrentHeight(), plantedStr));
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:136: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            holder.textWaterStatus.setText(String.format("⚠️ Due Today • Cycle: Every %d days", interval));
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:141: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+            holder.textWaterStatus.setText(String.format("Next: %s • Cycle: %d days", nextStr, interval));
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\model\TreeFactory.java:8: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+        switch (species.trim().toLowerCase()) {
+                               ~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\VolunteerAdapter.java:66: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        holder.textTreesCount.setText(String.format("🌱 %d %s currently assigned",
+                                      ^
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build.gradle:25: Warning: A newer version of com.android.tools:desugar_jdk_libs than 2.1.3 is available: 2.1.5 [GradleDependency]
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.3'
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build.gradle:26: Warning: A newer version of androidx.appcompat:appcompat than 1.7.0 is available: 1.8.0 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build.gradle:27: Warning: A newer version of com.google.android.material:material than 1.12.0 is available: 1.14.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build.gradle:28: Warning: A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0 [GradleDependency]
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\build.gradle:30: Warning: A newer version of androidx.work:work-runtime than 2.9.1 is available: 2.12.0 [GradleDependency]
+    implementation 'androidx.work:work-runtime:2.9.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:47: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\VolunteerAdapter.java:40: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged();
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:80: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:104: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:128: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:154: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+        <LinearLayout
+         ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompoundDrawables":
+   A LinearLayout which contains an ImageView and a TextView can be more
+   efficiently handled as a compound drawable (a single TextView, using the
+   drawableTop, drawableLeft, drawableRight and/or drawableBottom attributes
+   to draw one or more images adjacent to the text).
+
+   If the two widgets are offset from each other with margins, this can be
+   replaced with a drawablePadding attribute.
+
+   There's a lint quickfix to perform this conversion in the Eclipse plugin.
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:97: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+                <LinearLayout
+                 ~~~~~~~~~~~~
+
+   Explanation for issues of type "DisableBaselineAlignment":
+   When a LinearLayout is used to distribute the space proportionally between
+   nested layouts, the baseline alignment property should be turned off to
+   make the layout computation faster.
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\activity_main.xml:8: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:8: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:8: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_volunteers.xml:8: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\colors.xml:6: Warning: The resource R.color.primary_light appears to be unused [UnusedResources]
+    <color name="primary_light">#4C8C4A</color>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\colors.xml:8: Warning: The resource R.color.secondary_light appears to be unused [UnusedResources]
+    <color name="secondary_light">#E0F2F1</color>
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\colors.xml:32: Warning: The resource R.color.water_due_urgent_bg appears to be unused [UnusedResources]
+    <color name="water_due_urgent_bg">#FFEBEE</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\colors.xml:35: Warning: The resource R.color.water_ok appears to be unused [UnusedResources]
+    <color name="water_ok">#00796B</color>
+           ~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\colors.xml:36: Warning: The resource R.color.water_ok_bg appears to be unused [UnusedResources]
+    <color name="water_ok_bg">#E0F2F1</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\drawable\ic_check.xml:1: Warning: The resource R.drawable.ic_check appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\drawable\ic_history.xml:1: Warning: The resource R.drawable.ic_history appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\drawable\ic_phone.xml:1: Warning: The resource R.drawable.ic_phone appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:14: Warning: The resource R.string.action_register_volunteer appears to be unused [UnusedResources]
+    <string name="action_register_volunteer">Add Caretaker</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:15: Warning: The resource R.string.action_record_watering appears to be unused [UnusedResources]
+    <string name="action_record_watering">Record Watering</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:16: Warning: The resource R.string.action_log_growth appears to be unused [UnusedResources]
+    <string name="action_log_growth">Log Growth</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:17: Warning: The resource R.string.action_load_demo appears to be unused [UnusedResources]
+    <string name="action_load_demo">Load Demo Data</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:18: Warning: The resource R.string.action_clear_data appears to be unused [UnusedResources]
+    <string name="action_clear_data">Reset Database</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:21: Warning: The resource R.string.filter_all appears to be unused [UnusedResources]
+    <string name="filter_all">All</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:22: Warning: The resource R.string.filter_due appears to be unused [UnusedResources]
+    <string name="filter_due">Watering Due</string>
+            ~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:23: Warning: The resource R.string.filter_healthy appears to be unused [UnusedResources]
+    <string name="filter_healthy">Healthy</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:24: Warning: The resource R.string.filter_needs_care appears to be unused [UnusedResources]
+    <string name="filter_needs_care">Needs Care</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\strings.xml:25: Warning: The resource R.string.filter_dead appears to be unused [UnusedResources]
+    <string name="filter_dead">Dead</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\styles.xml:11: Warning: The resource R.style.ShapeAppearance_App_SmallComponent appears to be unused [UnusedResources]
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\values\styles.xml:15: Warning: The resource R.style.ShapeAppearance_App_MediumComponent appears to be unused [UnusedResources]
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:36: Warning: This text field does not specify an inputType [TextFields]
+            <EditText
+             ~~~~~~~~
+
+   Explanation for issues of type "TextFields":
+   Providing an inputType attribute on a text field improves usability because
+   depending on the data to be input, optimized keyboards can be shown to the
+   user (such as just digits and parentheses for a phone number). 
+
+   The lint detector also looks at the id of the view, and if the id offers a
+   hint of the purpose of the field (for example, the id contains the phrase
+   phone or email), then lint will also ensure that the inputType contains the
+   corresponding type attributes.
+
+   If you really want to keep the text field generic, you can suppress this
+   warning by setting inputType="text".
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:36: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:87: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:111: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:135: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:160: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:188: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_volunteer.xml:23: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:254: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageView
+                     ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:305: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageView
+                     ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:364: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageView
+                     ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:415: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageView
+                     ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:78: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageView
+                     ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:30: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:50: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:173: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_volunteers.xml:70: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:204: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textCaretakers.setText(volunteers.size() + " Caretakers active");
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:204: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        textCaretakers.setText(volunteers.size() + " Caretakers active");
+                                                   ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:205: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textSurvivalRate.setText(df.format(stats.getSurvivalRate()) + "%");
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:206: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textSurvivingCount.setText(stats.getSurviving() + " Surviving • " + stats.getDead() + " Dead");
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:206: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        textSurvivingCount.setText(stats.getSurviving() + " Surviving • " + stats.getDead() + " Dead");
+                                                          ~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:206: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        textSurvivingCount.setText(stats.getSurviving() + " Surviving • " + stats.getDead() + " Dead");
+                                                                                              ~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:215: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            textDueSubtitle.setText(dueSaplings.size() + " sapling(s) need watering on campus");
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:215: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            textDueSubtitle.setText(dueSaplings.size() + " sapling(s) need watering on campus");
+                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:275: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textVolunteer.setText("Caretaker: " + (s.getVolunteer() != null ? s.getVolunteer().getName() : "Unassigned"));
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:275: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        textVolunteer.setText("Caretaker: " + (s.getVolunteer() != null ? s.getVolunteer().getName() : "Unassigned"));
+                              ~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:280: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            textHealth.setText("DEAD");
+                               ~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:292: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            textWaterStatus.setText("⚠️ Watering Due Today");
+                                    ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:296: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            textWaterStatus.setText("Next: " + s.getSchedule().getNextWatering().format(DATE_FORMATTER));
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:296: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            textWaterStatus.setText("Next: " + s.getSchedule().getNextWatering().format(DATE_FORMATTER));
+                                    ~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:394: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            textCount.setText("No matching saplings");
+                              ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:398: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            textCount.setText("Showing " + list.size() + " saplings");
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:398: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            textCount.setText("Showing " + list.size() + " saplings");
+                              ~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:398: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            textCount.setText("Showing " + list.size() + " saplings");
+                                                         ~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:448: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textSubtitle.setText(list.size() + " registered campus caretakers");
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:448: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        textSubtitle.setText(list.size() + " registered campus caretakers");
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:506: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textOverallRate.setText(df.format(stats.getSurvivalRate()) + "%");
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:532: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            title.setText("🌿 " + sp.getSpecies());
+                          ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:539: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            rate.setText(df.format(sp.getSurvivalRate()) + "% Survival");
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:539: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            rate.setText(df.format(sp.getSurvivalRate()) + "% Survival");
+                                                           ~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:797: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textLocation.setText("📍 Location: " + fresh.getTree().getLocation().getArea());
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:797: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        textLocation.setText("📍 Location: " + fresh.getTree().getLocation().getArea());
+                             ~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:798: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textPlanted.setText("🌱 Planted: " + fresh.getTree().getPlantedOn().format(DATE_FORMATTER));
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:798: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        textPlanted.setText("🌱 Planted: " + fresh.getTree().getPlantedOn().format(DATE_FORMATTER));
+                            ~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:802: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        textCaretaker.setText("👤 Caretaker: " + volStr);
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:802: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        textCaretaker.setText("👤 Caretaker: " + volStr);
+                              ~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:811: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            textDeathReason.setText("⚠️ Cause of Death: " + (fresh.getDeathReason() != null ? fresh.getDeathReason() : "Unspecified"));
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:811: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            textDeathReason.setText("⚠️ Cause of Death: " + (fresh.getDeathReason() != null ? fresh.getDeathReason() : "Unspecified"));
+                                    ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:844: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    line2.setText("Note: " + r.getNote());
+                                  ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\MainActivity.java:844: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    line2.setText("Note: " + r.getNote());
+                                  ~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:66: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        holder.textVolunteer.setText("Caretaker: " + volunteerName);
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:66: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        holder.textVolunteer.setText("Caretaker: " + volunteerName);
+                                     ~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:75: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            holder.textHealth.setText("DEAD");
+                                      ~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:81: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            holder.textDeathReason.setText("Cause of death: " + reason);
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:81: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            holder.textDeathReason.setText("Cause of death: " + reason);
+                                           ~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:83: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            holder.textWaterStatus.setText("Watering suspended (Sapling is Dead)");
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:92: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            holder.textHealth.setText("NEEDS CARE");
+                                      ~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:103: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            holder.textHealth.setText("HEALTHY");
+                                      ~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:139: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            holder.btnWater.setText("💧 Water Now");
+                                    ~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\java\com\mnr\greencampus\adapter\SaplingAdapter.java:144: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            holder.btnWater.setText("💧 Water");
+                                    ~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_growth.xml:18: Warning: Hardcoded string "Target Sapling", should use @string resource [HardcodedText]
+            android:text="Target Sapling"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_growth.xml:37: Warning: Hardcoded string "Height in cm (e.g. 24.5)", should use @string resource [HardcodedText]
+            android:hint="Height in cm (e.g. 24.5)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_growth.xml:53: Warning: Hardcoded string "Health Condition", should use @string resource [HardcodedText]
+            android:text="Health Condition"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_growth.xml:72: Warning: Hardcoded string "Observation Note (e.g. Healthy leaf growth)", should use @string resource [HardcodedText]
+            android:hint="Observation Note (e.g. Healthy leaf growth)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_growth.xml:87: Warning: Hardcoded string "Death Reason (Mandatory if DEAD)", should use @string resource [HardcodedText]
+            android:hint="Death Reason (Mandatory if DEAD)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:19: Warning: Hardcoded string "Sapling ID (e.g. GC101)", should use @string resource [HardcodedText]
+            android:hint="Sapling ID (e.g. GC101)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:33: Warning: Hardcoded string "Tree Species", should use @string resource [HardcodedText]
+            android:text="Tree Species"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:52: Warning: Hardcoded string "Campus Location (e.g. East Garden)", should use @string resource [HardcodedText]
+            android:hint="Campus Location (e.g. East Garden)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:66: Warning: Hardcoded string "Planting Date", should use @string resource [HardcodedText]
+            android:text="Planting Date"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:86: Warning: Hardcoded string "2026-11-06", should use @string resource [HardcodedText]
+                android:text="2026-11-06"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:96: Warning: Hardcoded string "Pick", should use @string resource [HardcodedText]
+                android:text="Pick"
+                ~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:105: Warning: Hardcoded string "Watering Interval (1–30 days)", should use @string resource [HardcodedText]
+            android:hint="Watering Interval (1–30 days)"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:114: Warning: Hardcoded string "2", should use @string resource [HardcodedText]
+                android:text="2"
+                ~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:122: Warning: Hardcoded string "Assigned Caretaker", should use @string resource [HardcodedText]
+            android:text="Assigned Caretaker"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_volunteer.xml:13: Warning: Hardcoded string "Volunteer ID (e.g. V05)", should use @string resource [HardcodedText]
+        android:hint="Volunteer ID (e.g. V05)"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_volunteer.xml:27: Warning: Hardcoded string "Volunteer Full Name", should use @string resource [HardcodedText]
+        android:hint="Volunteer Full Name"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_volunteer.xml:40: Warning: Hardcoded string "Phone Number (Optional)", should use @string resource [HardcodedText]
+        android:hint="Phone Number (Optional)"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_assign_caretaker.xml:12: Warning: Hardcoded string "Select Sapling", should use @string resource [HardcodedText]
+        android:text="Select Sapling"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_assign_caretaker.xml:29: Warning: Hardcoded string "Select Caretaker", should use @string resource [HardcodedText]
+        android:text="Select Caretaker"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:26: Warning: Hardcoded string "GC101", should use @string resource [HardcodedText]
+                android:text="GC101"
+                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:41: Warning: Hardcoded string "Neem", should use @string resource [HardcodedText]
+                android:text="Neem"
+                ~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:60: Warning: Hardcoded string "HEALTHY", should use @string resource [HardcodedText]
+                android:text="HEALTHY"
+                ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:85: Warning: Hardcoded string "📍 Location: Main Block - East Garden", should use @string resource [HardcodedText]
+                    android:text="📍 Location: Main Block - East Garden"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:94: Warning: Hardcoded string "🌱 Planted: 2026-08-15", should use @string resource [HardcodedText]
+                    android:text="🌱 Planted: 2026-08-15"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:103: Warning: Hardcoded string "👤 Caretaker: Priya Sharma (V01)", should use @string resource [HardcodedText]
+                    android:text="👤 Caretaker: Priya Sharma (V01)"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:112: Warning: Hardcoded string "💧 Watering: Every 2 days • Next: 2026-11-06", should use @string resource [HardcodedText]
+                    android:text="💧 Watering: Every 2 days • Next: 2026-11-06"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:121: Warning: Hardcoded string "📏 Current Height: 38.5 cm", should use @string resource [HardcodedText]
+                    android:text="📏 Current Height: 38.5 cm"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:130: Warning: Hardcoded string "⚠️ Death Reason: Drought", should use @string resource [HardcodedText]
+                    android:text="⚠️ Death Reason: Drought"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:152: Warning: Hardcoded string "💧 Water", should use @string resource [HardcodedText]
+                android:text="💧 Water"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:163: Warning: Hardcoded string "📈 Log Growth", should use @string resource [HardcodedText]
+                android:text="📈 Log Growth"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:173: Warning: Hardcoded string "Growth & Health History", should use @string resource [HardcodedText]
+            android:text="Growth &amp; Health History"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:189: Warning: Hardcoded string "No growth observations logged yet.", should use @string resource [HardcodedText]
+            android:text="No growth observations logged yet."
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_sapling_detail.xml:202: Warning: Hardcoded string "Delete Sapling", should use @string resource [HardcodedText]
+            android:text="Delete Sapling"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:32: Warning: Hardcoded string "GC101", should use @string resource [HardcodedText]
+                android:text="GC101"
+                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:47: Warning: Hardcoded string "Neem", should use @string resource [HardcodedText]
+                android:text="Neem"
+                ~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:66: Warning: Hardcoded string "HEALTHY", should use @string resource [HardcodedText]
+                android:text="HEALTHY"
+                ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:98: Warning: Hardcoded string "Main Block - East Garden", should use @string resource [HardcodedText]
+                android:text="Main Block - East Garden"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:122: Warning: Hardcoded string "Caretaker: Priya Sharma", should use @string resource [HardcodedText]
+                android:text="Caretaker: Priya Sharma"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:147: Warning: Hardcoded string "Due Today • Every 2 days", should use @string resource [HardcodedText]
+                android:text="Due Today • Every 2 days"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:171: Warning: Hardcoded string "Height: 38.5 cm • Planted: 2026-08-15", should use @string resource [HardcodedText]
+                android:text="Height: 38.5 cm • Planted: 2026-08-15"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:200: Warning: Hardcoded string "Reason: Waterlogging", should use @string resource [HardcodedText]
+                android:text="Reason: Waterlogging"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:220: Warning: Hardcoded string "💧 Water", should use @string resource [HardcodedText]
+                android:text="💧 Water"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:232: Warning: Hardcoded string "📈 Growth", should use @string resource [HardcodedText]
+                android:text="📈 Growth"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_sapling.xml:242: Warning: Hardcoded string "Details", should use @string resource [HardcodedText]
+                android:text="Details"
+                ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_volunteer.xml:48: Warning: Hardcoded string "Priya Sharma", should use @string resource [HardcodedText]
+                    android:text="Priya Sharma"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_volunteer.xml:63: Warning: Hardcoded string "V01", should use @string resource [HardcodedText]
+                    android:text="V01"
+                    ~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_volunteer.xml:74: Warning: Hardcoded string "+91 98765 43210", should use @string resource [HardcodedText]
+                android:text="+91 98765 43210"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_volunteer.xml:83: Warning: Hardcoded string "🌱 3 trees currently assigned", should use @string resource [HardcodedText]
+                android:text="🌱 3 trees currently assigned"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\item_volunteer.xml:96: Warning: Hardcoded string "Delete volunteer", should use @string resource [HardcodedText]
+            android:contentDescription="Delete volunteer" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\menu\toolbar_menu.xml:7: Warning: Hardcoded string "🌱 Load Campus Demo Data", should use @string resource [HardcodedText]
+        android:title="🌱 Load Campus Demo Data"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\menu\toolbar_menu.xml:11: Warning: Hardcoded string "🔔 Check Watering Reminders", should use @string resource [HardcodedText]
+        android:title="🔔 Check Watering Reminders"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\menu\toolbar_menu.xml:15: Warning: Hardcoded string "ℹ️ About Project (MNR Univ)", should use @string resource [HardcodedText]
+        android:title="ℹ️ About Project (MNR Univ)"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\menu\toolbar_menu.xml:19: Warning: Hardcoded string "🗑️ Reset Database", should use @string resource [HardcodedText]
+        android:title="🗑️ Reset Database"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:33: Warning: Hardcoded string "🌱 MNR UNIVERSITY", should use @string resource [HardcodedText]
+                    android:text="🌱 MNR UNIVERSITY"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:43: Warning: Hardcoded string "Green Campus Plantation Drive", should use @string resource [HardcodedText]
+                    android:text="Green Campus Plantation Drive"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:52: Warning: Hardcoded string "Track growth, schedules & survival rates across campus sectors.", should use @string resource [HardcodedText]
+                    android:text="Track growth, schedules &amp; survival rates across campus sectors."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:85: Warning: Hardcoded string "TOTAL PLANTED", should use @string resource [HardcodedText]
+                        android:text="TOTAL PLANTED"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:95: Warning: Hardcoded string "0", should use @string resource [HardcodedText]
+                        android:text="0"
+                        ~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:104: Warning: Hardcoded string "0 Caretakers active", should use @string resource [HardcodedText]
+                        android:text="0 Caretakers active"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:129: Warning: Hardcoded string "SURVIVAL RATE", should use @string resource [HardcodedText]
+                        android:text="SURVIVAL RATE"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:139: Warning: Hardcoded string "0.0%", should use @string resource [HardcodedText]
+                        android:text="0.0%"
+                        ~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:148: Warning: Hardcoded string "0 Surviving • 0 Dead", should use @string resource [HardcodedText]
+                        android:text="0 Surviving • 0 Dead"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:179: Warning: Hardcoded string "Watering Due", should use @string resource [HardcodedText]
+                    android:contentDescription="Watering Due" />
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:192: Warning: Hardcoded string "Watering Due Today", should use @string resource [HardcodedText]
+                        android:text="Watering Due Today"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:201: Warning: Hardcoded string "0 saplings need watering", should use @string resource [HardcodedText]
+                        android:text="0 saplings need watering"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:211: Warning: Hardcoded string "VIEW", should use @string resource [HardcodedText]
+                    android:text="VIEW"
+                    ~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:222: Warning: Hardcoded string "Quick Actions", should use @string resource [HardcodedText]
+            android:text="Quick Actions"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:271: Warning: Hardcoded string "Add Sapling", should use @string resource [HardcodedText]
+                            android:text="Add Sapling"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:279: Warning: Hardcoded string "Register tree", should use @string resource [HardcodedText]
+                            android:text="Register tree"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:322: Warning: Hardcoded string "Record Water", should use @string resource [HardcodedText]
+                            android:text="Record Water"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:330: Warning: Hardcoded string "Update schedule", should use @string resource [HardcodedText]
+                            android:text="Update schedule"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:381: Warning: Hardcoded string "Log Growth", should use @string resource [HardcodedText]
+                            android:text="Log Growth"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:389: Warning: Hardcoded string "Height & health", should use @string resource [HardcodedText]
+                            android:text="Height &amp; health"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:432: Warning: Hardcoded string "Assign Care", should use @string resource [HardcodedText]
+                            android:text="Assign Care"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:440: Warning: Hardcoded string "Set volunteer", should use @string resource [HardcodedText]
+                            android:text="Set volunteer"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:453: Warning: Hardcoded string "Today's Watering Schedule", should use @string resource [HardcodedText]
+            android:text="Today's Watering Schedule"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:470: Warning: Hardcoded string "✅ All saplings are up to date! No watering due right now.", should use @string resource [HardcodedText]
+            android:text="✅ All saplings are up to date! No watering due right now."
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:495: Warning: Hardcoded string "💡 Quick Project Demo", should use @string resource [HardcodedText]
+                    android:text="💡 Quick Project Demo"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:505: Warning: Hardcoded string "Populate the app with realistic campus saplings, caretakers, and growth records to test all features instantly.", should use @string resource [HardcodedText]
+                    android:text="Populate the app with realistic campus saplings, caretakers, and growth records to test all features instantly."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_dashboard.xml:514: Warning: Hardcoded string "Load Campus Demo Data", should use @string resource [HardcodedText]
+                    android:text="Load Campus Demo Data"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:20: Warning: Hardcoded string "Survival & Growth Analytics", should use @string resource [HardcodedText]
+            android:text="Survival &amp; Growth Analytics"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:29: Warning: Hardcoded string "Official campus plantation survival metrics", should use @string resource [HardcodedText]
+            android:text="Official campus plantation survival metrics"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:51: Warning: Hardcoded string "OVERALL CAMPUS SURVIVAL", should use @string resource [HardcodedText]
+                    android:text="OVERALL CAMPUS SURVIVAL"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:68: Warning: Hardcoded string "90.00%", should use @string resource [HardcodedText]
+                        android:text="90.00%"
+                        ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:112: Warning: Hardcoded string "Planted", should use @string resource [HardcodedText]
+                            android:text="Planted"
+                            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:120: Warning: Hardcoded string "10", should use @string resource [HardcodedText]
+                            android:text="10"
+                            ~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:135: Warning: Hardcoded string "Surviving", should use @string resource [HardcodedText]
+                            android:text="Surviving"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:143: Warning: Hardcoded string "9", should use @string resource [HardcodedText]
+                            android:text="9"
+                            ~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:158: Warning: Hardcoded string "Dead", should use @string resource [HardcodedText]
+                            android:text="Dead"
+                            ~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:166: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+                            android:text="1"
+                            ~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:182: Warning: Hardcoded string "Species-Wise Performance", should use @string resource [HardcodedText]
+            android:text="Species-Wise Performance"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_reports.xml:201: Warning: Hardcoded string "Share Survival Report", should use @string resource [HardcodedText]
+            android:text="Share Survival Report"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:43: Warning: Hardcoded string "Search by ID, species, location, caretaker...", should use @string resource [HardcodedText]
+                android:hint="Search by ID, species, location, caretaker..."
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:82: Warning: Hardcoded string "All", should use @string resource [HardcodedText]
+                android:text="All" />
+                ~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:89: Warning: Hardcoded string "💧 Due Watering", should use @string resource [HardcodedText]
+                android:text="💧 Due Watering" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:96: Warning: Hardcoded string "🌿 Healthy", should use @string resource [HardcodedText]
+                android:text="🌿 Healthy" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:103: Warning: Hardcoded string "⚠️ Needs Care", should use @string resource [HardcodedText]
+                android:text="⚠️ Needs Care" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:110: Warning: Hardcoded string "🍂 Dead", should use @string resource [HardcodedText]
+                android:text="🍂 Dead" />
+                ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:117: Warning: Hardcoded string "Neem", should use @string resource [HardcodedText]
+                android:text="Neem" />
+                ~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:124: Warning: Hardcoded string "Mango", should use @string resource [HardcodedText]
+                android:text="Mango" />
+                ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:131: Warning: Hardcoded string "Banyan", should use @string resource [HardcodedText]
+                android:text="Banyan" />
+                ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:138: Warning: Hardcoded string "Teak", should use @string resource [HardcodedText]
+                android:text="Teak" />
+                ~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:149: Warning: Hardcoded string "Showing 0 saplings", should use @string resource [HardcodedText]
+        android:text="Showing 0 saplings"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:183: Warning: Hardcoded string "No Saplings Found", should use @string resource [HardcodedText]
+            android:text="No Saplings Found"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_saplings.xml:192: Warning: Hardcoded string "Try adjusting your search or filter chips", should use @string resource [HardcodedText]
+            android:text="Try adjusting your search or filter chips"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_volunteers.xml:27: Warning: Hardcoded string "Campus Caretakers", should use @string resource [HardcodedText]
+                android:text="Campus Caretakers"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_volunteers.xml:36: Warning: Hardcoded string "0 registered volunteers", should use @string resource [HardcodedText]
+                android:text="0 registered volunteers"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_volunteers.xml:45: Warning: Hardcoded string "+ Add", should use @string resource [HardcodedText]
+            android:text="+ Add"
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_volunteers.xml:80: Warning: Hardcoded string "No Volunteers Registered", should use @string resource [HardcodedText]
+            android:text="No Volunteers Registered"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\view_volunteers.xml:89: Warning: Hardcoded string "Tap '+ Add' or load demo data to register caretakers.", should use @string resource [HardcodedText]
+            android:text="Tap '+ Add' or load demo data to register caretakers."
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+C:\Users\Yashwanth Talari\Downloads\GreenCampusTrackerAndroid\GreenCampusTrackerAndroid\app\src\main\res\layout\dialog_add_sapling.xml:85: Warning: When you define paddingStart you should probably also define paddingEnd for right-to-left symmetry [RtlSymmetry]
+                android:paddingStart="12dp"
+                ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+0 errors, 218 warnings
